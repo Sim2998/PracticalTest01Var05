@@ -6,4 +6,12 @@
     <string name="center">Center</string>
     <string name="bottom_left">Bottom Left</string>
     <string name="bottom_right">Bottom Right</string>
+    <string name="title_activity_practical_test01_var05_secondary">
+        PracticalTest01Var05SecondaryActivity
+    </string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
 </resources>

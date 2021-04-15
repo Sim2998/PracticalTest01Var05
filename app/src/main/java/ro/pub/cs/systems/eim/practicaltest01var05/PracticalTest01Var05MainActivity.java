@@ -2,6 +2,7 @@ package ro.pub.cs.systems.eim.practicaltest01var05;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -45,6 +46,14 @@ public class PracticalTest01Var05MainActivity extends AppCompatActivity {
             if (v.getId() == R.id.center) {
                 no_of_clicks++;
                 displaytext = displaytext + center.getText().toString();
+            }
+            if(v.getId() == R.id.navigate_to_secondary_activity_button) {
+                Intent intent = new Intent(getApplicationContext(), PracticalTest01Var05SecondaryActivity.class);
+                intent.putExtra("text", displaytext);
+                Toast.makeText(getApplicationContext(), "text: " + displaytext, Toast.LENGTH_LONG).show();
+                startActivityForResult(intent, 8);
+                displaytext = "";
+                no_of_clicks = 0;
             }
             displaytext = displaytext + ",";
             Log.d("mamaam", "onCreate() method was invoked" + no_of_clicks);
